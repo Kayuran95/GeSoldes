@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "188104562001",
+    "project_id": "ge-soldes-963b1",
+    "storage_bucket": "ge-soldes-963b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188104562001:android:ec9b5b55e0eed03ddaaf70",
+        "android_client_info": {
+          "package_name": "com.example.ge_soldesv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188104562001-20n9q6koekis1eibdj6gbijcbghmpv3r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMPyaBZknk7W33s9f2YFysQFffvvuCdLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188104562001-20n9q6koekis1eibdj6gbijcbghmpv3r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
