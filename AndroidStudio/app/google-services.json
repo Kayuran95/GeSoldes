@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "615539195782",
-    "project_id": "ge-soldes",
-    "storage_bucket": "ge-soldes.appspot.com"
+    "project_number": "537806775097",
+    "project_id": "ge-soldesdb",
+    "storage_bucket": "ge-soldesdb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:615539195782:android:c9bfffcf3c8de0ec19f607",
+        "mobilesdk_app_id": "1:537806775097:android:f701be92942ea7c1b53ee8",
         "android_client_info": {
           "package_name": "com.example.ge_soldes"
         }
       },
       "oauth_client": [
         {
-          "client_id": "615539195782-42urpqt7bb9i7008g7au5amfed7pfrd6.apps.googleusercontent.com",
+          "client_id": "537806775097-l9p8a786efnern7lbtoaelg49e0q6big.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB9-XVj_mcSgayjHRi_WLwcfcmlsBT8hns"
+          "current_key": "AIzaSyC0yNLQ_GYOuCv-NgjEo1WaRWfDTV884vQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "615539195782-42urpqt7bb9i7008g7au5amfed7pfrd6.apps.googleusercontent.com",
+              "client_id": "537806775097-l9p8a786efnern7lbtoaelg49e0q6big.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -7,6 +7,8 @@ public class Produits {
     private String prix_solde;
     private String date_ajout;
 
+    public Produits() {
+    }
 
     public Produits(String nom_produit, String adresse, String prix_base, String prix_solde, String date_ajout) {
         this.nom_produit = nom_produit;

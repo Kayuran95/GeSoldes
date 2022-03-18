@@ -2,6 +2,7 @@ package com.example.ge_soldesv2;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,7 +27,7 @@ public class FirebaseDatabaseHelper {
     }
 
     public FirebaseDatabaseHelper(){
-        mDatabase = FirebaseDatabase.getInstance();
+        mDatabase = FirebaseDatabase.getInstance("https://ge-soldes-963b1-default-rtdb.europe-west1.firebasedatabase.app");
         mReferenceProduits = mDatabase.getReference("produit");
     }
 
@@ -49,6 +50,17 @@ public class FirebaseDatabaseHelper {
 
             }
         });
+    }
+
+    public void addProduit(Produits produits, final DataStatus dataStatus){
+        String key = mReferenceProduits.push().getKey();
+        mReferenceProduits.child(key).setValue(produits)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        dataStatus.DataIsInserted();
+                    }
+                });
     }
 
 }
