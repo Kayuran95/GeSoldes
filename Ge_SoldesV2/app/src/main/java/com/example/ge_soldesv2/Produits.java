@@ -6,16 +6,18 @@ public class Produits {
     private String prix_base;
     private String prix_solde;
     private String date_ajout;
+    private String image_adresse;
 
     public Produits() {
     }
 
-    public Produits(String nom_produit, String adresse, String prix_base, String prix_solde, String date_ajout) {
+    public Produits(String nom_produit, String adresse, String prix_base, String prix_solde, String date_ajout, String image_adresse) {
         this.nom_produit = nom_produit;
         this.adresse = adresse;
         this.prix_base = prix_base;
         this.prix_solde = prix_solde;
         this.date_ajout = date_ajout;
+        this.image_adresse = image_adresse;
     }
 
     public String getNom_produit() {
@@ -57,4 +59,10 @@ public class Produits {
     public void setDate_ajout(String date_ajout) {
         this.date_ajout = date_ajout;
     }
+
+    public void setImage_adresse(String image_adresse) { this.image_adresse = image_adresse; }
+
+    public String getImage_adresse() { return image_adresse; }
+
+
 }

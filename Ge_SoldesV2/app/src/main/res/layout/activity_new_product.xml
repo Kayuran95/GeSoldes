@@ -95,14 +95,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/adresse_editText" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="214dp"
-        android:layout_height="54dp"
-        android:text="Ajouter l'image du produit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="104dp" />
+    <ImageButton
+        android:id="@+id/btn_image"
+        android:layout_width="207dp"
+        android:layout_height="125dp"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:onClick="btnImage"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

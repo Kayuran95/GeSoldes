@@ -1,0 +1,4 @@
+-Connexion à la Base de Donnée Firebase
+-Liste asynchrone (rafraichissement auto)
+-Page d'ajout de produit
+-Barre de menu
