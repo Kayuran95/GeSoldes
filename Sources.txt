@@ -3,3 +3,9 @@ https://www.youtube.com/watch?v=SLTUBf5FaCA
 https://www.youtube.com/watch?v=e3MDWAkWTyQ
 
 https://www.youtube.com/watch?v=EngsV2pgOqQ
+
+https://www.youtube.com/watch?v=yrKIqwS1cOc
+
+https://www.youtube.com/watch?v=BrDX6VTgTkg
+
+https://stackoverflow.com/questions/41737271/how-to-display-or-get-an-image-from-firebase-storage

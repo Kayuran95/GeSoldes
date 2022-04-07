@@ -8,15 +8,19 @@ import androidx.core.app.NotificationCompat;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageMetadata;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
@@ -33,8 +37,12 @@ public class NewProductActivity extends AppCompatActivity {
     private Button mbtn_Retour;
     private ImageButton mImage ;
     private int Galerie_intent = 2;
-    private StorageReference imagePath;
+    StorageReference imagePath;
     private String ImageLocation;
+    Uri downloadURI;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +58,13 @@ public class NewProductActivity extends AppCompatActivity {
         mbtn_Ajouter = (Button) findViewById(R.id.btn_ajouter);
         mbtn_Retour = (Button) findViewById(R.id.btn_retour);
         mImage = (ImageButton) findViewById(R.id.btn_image);
+
+        mbtn_Retour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         mbtn_Ajouter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,17 +99,12 @@ public class NewProductActivity extends AppCompatActivity {
                     }
                 });
 
-                mbtn_Retour.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        finish();
-                        return;
-                    }
-                });
+
 
             }
         });
     }
+
 
     public void btnImage(View view) {
         Intent intent = new Intent(Intent.ACTION_PICK);
@@ -110,10 +120,12 @@ public class NewProductActivity extends AppCompatActivity {
             mImage.setImageURI(uri);
             ImageLocation = uri.getLastPathSegment();
             imagePath = FirebaseStorage.getInstance().getReference().child("Produit").child(uri.getLastPathSegment());
+
             imagePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     Toast.makeText(NewProductActivity.this,"Uploaded", Toast.LENGTH_SHORT);
+
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override

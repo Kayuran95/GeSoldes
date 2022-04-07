@@ -1,5 +1,7 @@
 package com.example.ge_soldesv2;
 
+import android.net.Uri;
+
 public class Produits {
     private String nom_produit;
     private String adresse;

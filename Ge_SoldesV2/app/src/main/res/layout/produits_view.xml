@@ -6,6 +6,18 @@
     android:layout_height="wrap_content">
 
     <TextView
+        android:id="@+id/textView_prixSolde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TV_prix_solde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/prix_solde_TextView"
+        app:layout_constraintHorizontal_bias="0.825"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.813" />
+
+    <TextView
         android:id="@+id/prix_solde_TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,12 +69,23 @@
 
     <ImageView
         android:id="@+id/produit_imageView"
-        android:layout_width="106dp"
-        android:layout_height="70dp"
-        android:layout_marginEnd="304dp"
+        android:layout_width="83dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="268dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/textView_prixBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TV_prix_de_base"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/prix_base_TextView"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
 </androidx.constraintlayout.widget.ConstraintLayout>
