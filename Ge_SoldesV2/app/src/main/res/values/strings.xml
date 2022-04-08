@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Ge_SoldesV2</string>
     <string name="nom_du_produit">Nom du produit</string>
     <string name="date_jj_mm_aaaa">Date (jj/mm/aaaa)</string>
@@ -7,10 +7,20 @@
     <string name="prix_sold">Prix soldé</string>
     <string name="ajouter">Ajouter</string>
     <string name="retour">Retour</string>
-    <string name="textview">TextView</string>
-    <string name="textview2">TextView</string>
-    <string name="textview3">TextView</string>
-    <string name="textview4">TextView</string>
     <string name="TV_prix_solde">Prix soldé :</string>
     <string name="TV_prix_de_base">Prix de base :</string>
+    <string name="retour_detail">retour</string>
+    <string name="adresse">Adresse :</string>
+    <string name="textview">Adresse :</string>
+    <string name="textview3">"Adresse : "</string>
+    <string name="textview2">Nom Produit</string>
+    <string name="textview4">prix de base</string>
+    <string name="prix_de_base_chf">Prix de base : CHF</string>
+    <string name="essence">Essence</string>
+    <string name="adresse_detail">Adresse</string>
+    <string name="_1_90">1.90</string>
+    <string name="_2_00">2.00</string>
+    <string name="adresse_detail2">Adresse :</string>
+    <string name="prix_sold_chf">Prix Soldé : CHF</string>
+    <string name="prix_de_base_chf_detail">Prix de Base : CHF</string>
 </resources>

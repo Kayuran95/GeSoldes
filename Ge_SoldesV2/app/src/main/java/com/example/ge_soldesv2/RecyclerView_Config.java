@@ -1,8 +1,11 @@
 package com.example.ge_soldesv2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -11,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.squareup.picasso.Picasso;
@@ -29,16 +31,23 @@ public class RecyclerView_Config {
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setAdapter(mProduitsAdapter);
 
+
+
     }
 
 
-    class ProduitItemView extends RecyclerView.ViewHolder{
+
+
+    class ProduitItemView extends RecyclerView.ViewHolder {
         private TextView mNom_Produit;
         private TextView mPrix_Base;
         private TextView mPrix_solde;
         private TextView mAdresse;
         private String key;
         private ImageView mImageView;
+
+
+
 
         public ProduitItemView(ViewGroup parent){
             super(LayoutInflater.from(mContext).inflate(R.layout.produits_view,parent,false));
@@ -51,6 +60,9 @@ public class RecyclerView_Config {
 
 
         }
+
+
+
 
         public void bind( Produits produits,  String key){
             mNom_Produit.setText(produits.getNom_produit());
@@ -65,11 +77,37 @@ public class RecyclerView_Config {
                 }
             });
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(mContext,ProduitDetails.class);
+                    String nom = mNom_Produit.getText().toString();
+                    String prix_base = mPrix_Base.getText().toString();
+                    String prix_solde = mPrix_solde.getText().toString();
+                    String adresse = mAdresse.getText().toString();
+                    String image = produits.getImage_adresse();
+
+
+                    intent.putExtra("nom", nom);
+                    intent.putExtra("prixBase", prix_base);
+                    intent.putExtra("prixSolde", prix_solde);
+                    intent.putExtra("adresse", adresse);
+                    intent.putExtra("image", image);
+                    mContext.startActivity(intent);
+
+
+                }
+            });
+
         }
+
     }
-    class ProduitsAdapter extends RecyclerView.Adapter<ProduitItemView>{
+
+
+    public class ProduitsAdapter extends RecyclerView.Adapter<ProduitItemView>{
         private List<Produits> mProduitList ;
         private List<String> mKeys;
+
 
         public ProduitsAdapter(List<Produits> mProduitList, List<String> mKeys) {
             this.mProduitList = mProduitList;
@@ -91,5 +129,14 @@ public class RecyclerView_Config {
         public int getItemCount() {
             return mProduitList.size();
         }
+
+
+
+
+
     }
+
+
+
+
 }
